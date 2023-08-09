@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon" />
+    <title>ETHERCON</title>
+  </head>
+  <link href="/dist/output.css" rel="stylesheet" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <body class="overflow-x-hidden">
+    <div class="bg-background h-screen w-screen relative z-20" id="blur">
+      <nav class="flex justify-center sm:justify-between items-center p-10">
+        <div class="flex items-center text-3xl">
+          <img src="./assets/logo.png" alt="logo" class="w-60" />
+        </div>
+        <div class="hidden sm:block">
+          <div class="nav-link flex gap-4 bottom-0 w-full items-center">
+            <a
+              target="_blank"
+              href="https://discord.gg/THHZAsT7sj"
+              rel="noopener noreferrer"
+            >
+              <div class="bg-secondary p-3 shadow-md hover:shadow-primary">
+                <img src="./assets/discord.svg" alt="discord" />
+              </div>
+            </a>
+            <a
+              target="_blank"
+              href="https://twitter.com/pnslabs"
+              rel="noopener noreferrer"
+            >
+              <div class="bg-secondary p-3 shadow-md hover:shadow-primary">
+                <img src="./assets/twitter.svg" alt="twitter" />
+              </div>
+            </a>
+            <a
+              target="_blank"
+              href="https://github.com/pnslabs"
+              rel="noopener noreferrer"
+            >
+              <div class="bg-secondary p-3 shadow-md hover:shadow-primary">
+                <img src="./assets/github.svg" alt="github" />
+              </div>
+            </a>
+            <a
+              target="_blank"
+              href="https://t.me/pnslabs"
+              rel="noopener noreferrer"
+            >
+              <div class="bg-secondary p-3 shadow-md hover:shadow-primary">
+                <img src="./assets/telegram.svg" alt="telegram" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="flex flex-col items-center h-full">
+        <div
+          class="flex flex-col items-center justify-center w-full max-w-5xl px-10 md:px-14 mx-auto text-center gap-y-4"
+        >
+          <h1 class="text-4xl md:text-6xl lg:text-8xl text-text font-bold">
+            <span class="animate1">Mobile Phone <br /></span>
+            <span class="animate2">
+              Number +
+              <span
+                id="changeSpan"
+                class="animate__animated animate__fadeInUp text-yellow-300"
+              >
+                Web3
+              </span>
+            </span>
+          </h1>
+          <p
+            class="animate3 text-gray-400 text-base md:text-lg lg:text-xl w-full max-w-2xl"
+          >
+            Phone Number Service (PNS) is a protocol designed to connect a phone
+            number to wallet addresses on the Ethereum Blockchain
+          </p>
+        </div>
+        <div
+          class="group animate4 flex items-center text-white bg-primary hover:bg-accent transition-all ease-in-out duration-300 py-3 px-4 my-8 cursor-pointer rounded-md hover:rounded-full"
+          id="join"
+        >
+          <span class="text-base font-semibold">Join Waitlist</span>
+          <span>
+            <img
+              src="./assets/arrow.svg"
+              alt="arrow"
+              class="invert ml-1 transition-all group-hover:rotate-45"
+            />
+          </span>
+        </div>
+        <div class="animate5 flex justify-center">
+          <img src="./assets/rectangle-desktop-sm.png" alt="demo" />
+        </div>
+
+        <div class="flex flex-col pb-6 sm:hidden">
+          <p class="sm:hidden my-5 text-center">Join our community</p>
+          <div class="flex gap-4 bottom-0 w-full items-center">
+            <a
+              target="_blank"
+              href="https://discord.gg/THHZAsT7sj"
+              rel="noopener noreferrer"
+            >
+              <div class="bg-red-100 p-3">
+                <img src="./assets/discord.svg" alt="discord" />
+              </div>
+            </a>
+            <a
+              target="_blank"
+              href="https://twitter.com/pnslabs"
+              rel="noopener noreferrer"
+            >
+              <div class="bg-red-100 p-3">
+                <img src="./assets/twitter.svg" alt="twitter" />
+              </div>
+            </a>
+            <a
+              target="_blank"
+              href="https://github.com/pnslabs"
+              rel="noopener noreferrer"
+            >
+              <div class="bg-red-100 p-3">
+                <img src="./assets/github.svg" alt="github" />
+              </div>
+            </a>
+            <a
+              target="_blank"
+              href="https://t.me/pnslabs"
+              rel="noopener noreferrer"
+            >
+              <div class="bg-red-100 p-3">
+                <img src="./assets/telegram.svg" alt="telegram" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="hidden absolute animate__animated top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-background border-2 border-primary px-8 py-12 z-50 w-[90%] h-[80%] sm:w-auto sm:h-auto overflow-y-scroll sm:overflow-hidden"
+      id="modal"
+    >
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl text-text font-bold">
+          Get early access 😎
+        </h2>
+        <img
+          src="./assets/close.svg"
+          alt="close"
+          class="cursor-pointer invert w-6 hover:opacity-50"
+          id="close"
+        />
+      </div>
+      <p
+        class="text-gray-400 text-base md:text-lg lg:text-xl w-full max-w-lg mb-6"
+      >
+        Join our waitlist and community to be among the first to know when we
+        launch our product. 🚀
+      </p>
+      <form id="form">
+        <div class="oneline flex flex-col sm:flex-row gap-x-4">
+          <span class="flex flex-col grow">
+            <label for="fname" class="text-gray-400 mb-2">First name</label>
+            <input
+              type="text"
+              id="fname"
+              placeholder="John"
+              class="p-4 text-text border bg-transparent border-primary focus:border-white"
+            />
+            <span id="fnameError" class="text-xs text-red-500 mt-2"></span>
+            >
+          </span>
+          <span class="flex flex-col grow">
+            <label for="lname" class="text-gray-400 mb-2">Last name</label>
+            <input
+              type="text"
+              id="lname"
+              placeholder="Doe"
+              class="p-4 text-text border bg-transparent border-primary focus:border-white"
+            />
+            <span id="lnameError" class="text-xs text-red-500 mt-2"></span>
+          </span>
+        </div>
+        <span class="flex flex-col grow mt-4">
+          <label for="email" class="text-gray-400 mb-2">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="johndoe@mail.com"
+            class="p-4 text-text border bg-transparent border-primary focus:border-white"
+          />
+          <span id="emailError" class="text-xs text-red-500 mt-2"></span>
+        </span>
+        <button class="w-full outline-none border-none">
+          <div
+            class="group mt-10 flex items-center text-white bg-primary hover:bg-accent transition-all ease-in-out duration-300 py-3 px-4 my-8 cursor-pointer rounded-md justify-center"
+          >
+            <span class="text-base font-semibold text-center"
+              >Join Waitlist</span
+            >
+            <span>
+              <img
+                src="./assets/arrow.svg"
+                alt="arrow"
+                class="invert ml-1 transition-all group-hover:rotate-45"
+              />
+            </span>
+          </div>
+        </button>
+      </form>
+    </div>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+@keyframes slideup {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.nav-link>a {
+  visibility: hidden;
+  /* Hide elements by default */
+}
+
+.nav-link>a:nth-child(1) {
+  animation: slideup 1000ms forwards, showElement 1ms 0ms forwards;
+}
+
+.nav-link>a:nth-child(2) {
+  animation: slideup 1000ms 100ms forwards, showElement 1ms 100ms forwards;
+}
+
+.nav-link>a:nth-child(3) {
+  animation: slideup 1000ms 200ms forwards, showElement 1ms 200ms forwards;
+}
+
+.nav-link>a:nth-child(4) {
+  animation: slideup 1000ms 300ms forwards, showElement 1ms 300ms forwards;
+}
+
+@keyframes showElement {
+  to {
+    visibility: visible;
+    /* Show element after animation */
+  }
+}
+
+.animate1 {
+  animation: slideup 1s 500ms backwards, showElement 1ms 500ms forwards;
+}
+
+.animate2 {
+  animation: slideup 500ms 1000ms backwards, showElement 1ms 0ms forwards;
+}
+
+
+.animate3 {
+  animation: slideup 500ms 1500ms backwards, showElement 1ms 0ms forwards;
+}
+
+.animate4 {
+  animation: slideup 500ms 2000ms backwards, showElement 1ms 0ms forwards;
+}
+
+.animate5 {
+  animation: slideup 500ms 2500ms backwards, showElement 1ms 0ms forwards;
+}
